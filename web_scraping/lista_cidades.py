@@ -7,6 +7,7 @@ def lista_cidade_principais():
 
     principais_cidade = []
     for cidade in html_clima_soup.find_all('div', {'class': 'featured-city-card card'}):
-        principais_cidade.append(cidade.find('h2').text)
+        principais_cidade.append(cidade.find('h2').text.split(','))
+        principais_cidade[-1][-1] = principais_cidade[-1][-1].strip()
 
     return principais_cidade

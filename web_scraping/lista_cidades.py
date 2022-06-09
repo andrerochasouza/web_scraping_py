@@ -22,4 +22,5 @@ def lista_climas_principais():
 
     return principais_clima
 
+print(lista_cidade_principais())
 print(lista_climas_principais())
